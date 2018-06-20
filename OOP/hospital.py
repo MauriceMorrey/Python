@@ -17,6 +17,7 @@ class Hospital():
         self.patients = []
         self.name = name
         self.capacity = capacity
+        print "Hospital name: ", self.name
 
     def admit(self,new_patient):
         if (len(self.patients) >= self.capacity):
@@ -30,7 +31,7 @@ class Hospital():
 
     def discharge(self,cured_patient):
         self.patients.remove(cured_patient)
-        print "Patient" +cured_patient.Name+ "discharged"
+        print "Patient", cured_patient.Name, "discharged"
         cured_patient.Bed_num = None
         print "patient bed reset to number: ", cured_patient.Bed_num
         return self
